@@ -64,7 +64,7 @@ const Comparison: React.FC = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Problems Card */}
-          <article className="bg-white rounded-3xl border border-gray-100 p-8 hover:border-[#FF7A00] transition transform hover:-translate-y-1 hover:shadow-lg">
+          <article className="bg-white rounded-2xl border border-gray-100 p-8 hover:border-[#FF7A00] transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg h-full">
             <div className="mb-4">
               <h3 className="text-xl font-semibold text-[#0F2348]">
                 التحديات التي تواجهك
@@ -80,7 +80,7 @@ const Comparison: React.FC = () => {
                   key={idx}
                   className="flex items-center gap-4 p-4 rounded-xl border border-transparent hover:border-[#FF7A00] transition"
                 >
-                  <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-orange-50">
+                  <div className="shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-orange-50">
                     <it.icon className="h-7 w-7 text-red-500" />
                   </div>
                   <div>
@@ -94,7 +94,7 @@ const Comparison: React.FC = () => {
           </article>
 
           {/* Solutions Card */}
-          <article className="bg-white rounded-3xl border border-gray-100 p-8 hover:border-[#FF7A00] transition transform hover:-translate-y-1 hover:shadow-lg">
+          <article className="bg-white rounded-2xl border border-gray-100 p-8 hover:border-[#FF7A00] transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg h-full">
             <div className="mb-4">
               <h3 className="text-xl font-semibold text-[#0F2348]">
                 مع معلم برو ماكس
@@ -110,7 +110,7 @@ const Comparison: React.FC = () => {
                   key={idx}
                   className="flex items-center gap-4 p-4 rounded-xl border border-transparent hover:border-[#FF7A00] transition"
                 >
-                  <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-red-50">
+                  <div className="shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-red-50">
                     <it.icon className="h-7 w-7 text-[#FF7A00]" />
                   </div>
                   <div>
@@ -129,7 +129,7 @@ const Comparison: React.FC = () => {
           {FEATURES.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-3xl p-8 text-center shadow-sm hover:shadow-xl hover:-translate-y-2 transition"
+              className="bg-white rounded-2xl p-8 text-center shadow-sm hover:shadow-lg transition-transform duration-200 hover:-translate-y-1 h-full"
             >
               <div className="w-20 h-20 rounded-full bg-orange-50 flex items-center justify-center mx-auto">
                 <item.icon className="w-9 h-9 text-[#FF7A00]" />
