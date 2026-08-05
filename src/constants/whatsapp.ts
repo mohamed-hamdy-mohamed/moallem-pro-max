@@ -1,6 +1,8 @@
 declare global {
   interface Window {
-    fbq?: (...args: any[]) => void;
+    dataLayer?: Record<string, unknown>[];
+    gtag?: (...args: unknown[]) => void;
+    fbq?: (...args: unknown[]) => void;
   }
 }
 
@@ -8,26 +10,26 @@ export const WHATSAPP_NUMBER = "905553581535";
 
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
 
-export function handleWhatsAppClick(e?: MouseEvent) {
+/**
+ * Fires analytics for WhatsApp CTA clicks.
+ * Safe to pass to React `onClick` or call directly — never blocks navigation.
+ */
+export function handleWhatsAppClick(): void {
+  if (typeof window === "undefined") return;
+
   try {
-    if (typeof window === "undefined") return;
+    window.dataLayer?.push({
+      event: "whatsapp_click",
+      whatsapp_number: WHATSAPP_NUMBER,
+    });
 
-    // dataLayer push (Google Tag Manager)
-    if ((window as any).dataLayer && Array.isArray((window as any).dataLayer)) {
-      (window as any).dataLayer.push({
-        event: "whatsapp_click",
-        whatsapp_number: WHATSAPP_NUMBER,
-      });
-    }
+    window.gtag?.("event", "whatsapp_click", {
+      event_category: "engagement",
+      event_label: "whatsapp_cta",
+    });
 
-    // gtag fallback
-    if (typeof (window as any).gtag === "function") {
-      (window as any).gtag("event", "whatsapp_click", {
-        event_category: "engagement",
-        event_label: "final_cta",
-      });
-    }
-  } catch (err) {}
+    window.fbq?.("trackCustom", "WhatsAppClick");
+  } catch (error) {
+    console.error("WhatsApp tracking failed:", error);
+  }
 }
-
-export default WHATSAPP_URL;
