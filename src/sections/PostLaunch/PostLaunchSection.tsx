@@ -7,9 +7,10 @@ import SupportSection from "./SupportSection";
 const PostLaunchSection = () => {
   return (
     <section
+      id="post-launch"
       dir="rtl"
       aria-labelledby="post-launch-title"
-      className="relative overflow-hidden bg-[#F8FAFC] py-14 sm:py-16 lg:py-20"
+      className="cv-auto-lg relative overflow-hidden bg-[#F8FAFC] py-14 sm:py-16 lg:py-20"
     >
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <header className="mx-auto max-w-4xl text-center">

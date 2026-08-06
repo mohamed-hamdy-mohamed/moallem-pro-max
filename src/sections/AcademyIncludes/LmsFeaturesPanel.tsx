@@ -20,7 +20,11 @@ const LmsFeaturesPanel = () => (
         <img
           src={laptopImg}
           alt="لوحة تحكم نظام إدارة التعلم"
-          className="mx-auto w-full max-w-md bg-transparent object-contain drop-shadow-[0_20px_40px_rgba(15,35,72,0.12)]"
+          className="mx-auto h-auto w-full max-w-md bg-transparent object-cover"
+          width={1000}
+          height={667}
+          loading="lazy"
+          decoding="async"
         />
       </div>
 

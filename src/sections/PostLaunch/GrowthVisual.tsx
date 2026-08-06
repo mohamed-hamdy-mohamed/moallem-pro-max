@@ -33,6 +33,10 @@ const GrowthVisual = () => (
       src={laptopImg}
       alt="لوحة تحكم نمو الأكاديمية"
       className="relative z-10 mx-auto w-full max-w-[520px] bg-transparent object-contain drop-shadow-[0_24px_48px_rgba(15,35,72,0.12)]"
+      width={800}
+      height={1200}
+      loading="lazy"
+      decoding="async"
     />
 
     <div className="relative z-20 mt-4 flex items-center justify-center gap-3">

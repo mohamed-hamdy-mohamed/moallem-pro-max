@@ -11,7 +11,7 @@ const OptionalServicesSection = () => {
       id="services"
       dir="rtl"
       aria-labelledby="optional-services-title"
-      className="relative overflow-hidden bg-[#F8FAFC] py-12 sm:py-14 lg:py-16"
+      className="cv-auto-lg relative overflow-hidden bg-[#F8FAFC] py-12 sm:py-14 lg:py-16"
     >
       <SectionDotDecorations
         idPrefix="optional-services"

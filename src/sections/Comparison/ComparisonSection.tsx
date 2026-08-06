@@ -7,7 +7,7 @@ import SolutionCard from "./SolutionCard";
 
 const ComparisonSection = () => {
   return (
-    <section id="comparison" dir="rtl" aria-labelledby="comparison-title" className="relative bg-white py-12 sm:py-14 lg:py-16">
+    <section id="comparison" dir="rtl" aria-labelledby="comparison-title" className="cv-auto relative bg-white py-12 sm:py-14 lg:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <ComparisonHeader />
 

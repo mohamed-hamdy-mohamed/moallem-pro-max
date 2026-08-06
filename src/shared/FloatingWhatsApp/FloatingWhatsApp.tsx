@@ -7,6 +7,7 @@ const FloatingWhatsApp = () => {
       href={WHATSAPP_URL}
       onClick={() => handleWhatsAppClick()}
       target="_blank"
+      dir="ltr"
       rel="noopener noreferrer"
       aria-label="تواصل معنا عبر واتساب"
       title="تواصل معنا عبر واتساب"

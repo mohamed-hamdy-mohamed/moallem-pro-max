@@ -20,6 +20,10 @@ const NavBar = () => {
           <img
             src={logo}
             alt="معلم برو ماكس"
+            width={384}
+            height={384}
+            decoding="async"
+            fetchPriority="high"
             className="h-16 w-16 object-contain sm:h-20 sm:w-20 md:h-28 md:w-28"
           />
         </a>

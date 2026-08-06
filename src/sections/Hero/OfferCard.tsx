@@ -34,9 +34,9 @@ const OfferCard = () => {
               </div>
 
               <div className="min-w-0 flex-1">
-                <label className="mb-2 block text-sm font-semibold text-[#0F2348] sm:text-[15px]">
+                <p className="mb-2 block text-sm font-semibold text-[#0F2348] sm:text-[15px]">
                   {field.label}
-                </label>
+                </p>
 
                 <div
                   className={clsx(

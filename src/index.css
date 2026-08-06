@@ -18,3 +18,51 @@ body {
   font-family: var(--font-sans);
   padding-bottom: env(safe-area-inset-bottom, 0);
 }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Below-the-fold sections: skip layout/paint work until near viewport */
+.cv-auto {
+  content-visibility: auto;
+  contain: layout paint style;
+  contain-intrinsic-size: auto 900px;
+}
+
+.cv-auto-lg {
+  content-visibility: auto;
+  contain: layout paint style;
+  contain-intrinsic-size: auto 1200px;
+}
+
+/* Skip link — visually hidden until focused */
+.skip-link {
+  position: absolute;
+  inset-inline-start: 1rem;
+  top: 0;
+  z-index: 100;
+  transform: translateY(-120%);
+  border-radius: 0.75rem;
+  background: #0f2348;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.15s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0.75rem);
+  outline: 2px solid #ff7a00;
+  outline-offset: 2px;
+}

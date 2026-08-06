@@ -25,9 +25,10 @@ const SiteFooter = () => {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label={`واتساب: ${FOOTER_CONTENT.phone}`}
               className="flex items-center gap-2 text-xs text-white/90 transition-colors hover:text-white sm:text-sm"
             >
-              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#25D366]">
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#25D366]" aria-hidden="true">
                 <WhatsAppIcon className="h-4 w-4 text-white" />
               </span>
               <span dir="ltr">{FOOTER_CONTENT.phone}</span>
@@ -37,9 +38,10 @@ const SiteFooter = () => {
               href={`https://${FOOTER_CONTENT.website}`}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label={`الموقع: ${FOOTER_CONTENT.website}`}
               className="flex items-center gap-1.5 text-xs text-white/90 transition-colors hover:text-white sm:text-sm"
             >
-              <Globe className="h-4 w-4" strokeWidth={2} />
+              <Globe className="h-4 w-4" strokeWidth={2} aria-hidden="true" />
               <span>{FOOTER_CONTENT.website}</span>
             </a>
           </div>

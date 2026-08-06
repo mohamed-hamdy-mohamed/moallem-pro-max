@@ -7,6 +7,10 @@ const ComparisonHeader = () => (
       <img
         src={logo}
         alt="معلم برو ماكس"
+        width={384}
+        height={384}
+        loading="lazy"
+        decoding="async"
         className="h-[100px] w-[100px] object-contain sm:h-[120px] sm:w-[120px] md:h-[140px] md:w-[140px]"
       />
       <p className="mt-2 text-[11px] font-bold tracking-[0.2em] text-[#64748B] sm:text-xs">

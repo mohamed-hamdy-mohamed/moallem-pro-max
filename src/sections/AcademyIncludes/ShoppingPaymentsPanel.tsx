@@ -44,6 +44,10 @@ const ShoppingPaymentsPanel = () => (
             src={laptopImg}
             alt="صفحة دورة تعليمية"
             className="w-full bg-transparent object-contain drop-shadow-[0_20px_40px_rgba(15,35,72,0.12)]"
+            width={800}
+            height={1200}
+            loading="lazy"
+            decoding="async"
           />
           <div className="absolute bottom-[18%] left-1/2 -translate-x-1/2 rounded-lg bg-[#FF7A00] px-4 py-1.5 text-xs font-bold text-white shadow-md">
             {SHOPPING_PANEL.laptopCta}

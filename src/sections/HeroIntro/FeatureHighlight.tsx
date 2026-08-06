@@ -1,3 +1,4 @@
+import { memo } from "react";
 import clsx from "clsx";
 import type { LucideIcon } from "lucide-react";
 import type { IntroIconVariant } from "../../data/introData";
@@ -35,7 +36,7 @@ const FeatureHighlight = ({
           ICON_VARIANT_CLASSES[iconVariant],
         )}
       >
-        <Icon className="h-6 w-6 text-white sm:h-7 sm:w-7" strokeWidth={2} />
+        <Icon className="h-6 w-6 text-white sm:h-7 sm:w-7" strokeWidth={2} aria-hidden="true" />
       </div>
 
       <h3 className="mt-4 text-[15px] font-bold text-[#0F2348] sm:text-[17px]">
@@ -49,4 +50,4 @@ const FeatureHighlight = ({
   );
 };
 
-export default FeatureHighlight;
+export default memo(FeatureHighlight);

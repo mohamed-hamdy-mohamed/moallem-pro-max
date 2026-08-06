@@ -52,7 +52,11 @@ const HeroLaptop = () => {
         <img
           src={laptopImg}
           alt="لوحة تحكم معلم برو ماكس"
-          className="relative z-10 mx-auto w-full max-w-[560px] bg-transparent object-contain drop-shadow-[0_20px_40px_rgba(15,35,72,0.10)] lg:max-w-[580px]"
+          width={800}
+          height={1200}
+          decoding="async"
+          fetchPriority="high"
+          className="relative z-10 mx-auto w-full max-w-[560px] bg-transparent object-contain lg:max-w-[580px]"
         />
       </div>
 

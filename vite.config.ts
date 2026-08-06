@@ -11,10 +11,30 @@ export default defineConfig({
     babel({ presets: [reactCompilerPreset()] }),
   ],
   build: {
+    target: "es2020",
+    cssCodeSplit: true,
+    modulePreload: {
+      polyfill: false,
+    },
     assetsInlineLimit: (filePath) => {
-      // Keep SVGs as standalone files (no data-URI / base64 inlining).
       if (filePath.endsWith(".svg")) return false;
       return undefined;
+    },
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (!id.includes("node_modules")) return;
+          if (id.includes("react-dom") || id.includes("/react/")) {
+            return "react-vendor";
+          }
+          if (id.includes("lucide-react")) {
+            return "icons";
+          }
+          if (id.includes("clsx")) {
+            return "utils";
+          }
+        },
+      },
     },
   },
 });

@@ -7,6 +7,10 @@ const ServicesHeader = () => (
       <img
         src={logo}
         alt="معلم برو ماكس"
+        width={384}
+        height={384}
+        loading="lazy"
+        decoding="async"
         className="h-[88px] w-[88px] object-contain sm:h-[100px] sm:w-[100px]"
       />
       <p className="mt-2 text-[11px] font-bold tracking-[0.2em] text-[#64748B] sm:text-xs">

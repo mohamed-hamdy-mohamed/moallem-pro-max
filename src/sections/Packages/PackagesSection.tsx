@@ -8,7 +8,7 @@ const PackagesSection = () => (
     id="packages"
     dir="rtl"
     aria-labelledby="packages-title"
-    className="relative overflow-hidden bg-white py-12 sm:py-14 lg:py-16"
+    className="cv-auto-lg relative overflow-hidden bg-white py-12 sm:py-14 lg:py-16"
   >
     <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <PackagesHeader />

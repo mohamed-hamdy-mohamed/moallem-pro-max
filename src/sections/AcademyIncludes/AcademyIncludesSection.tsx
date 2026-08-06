@@ -9,7 +9,7 @@ const AcademyIncludesSection = () => {
       id="features"
       dir="rtl"
       aria-labelledby="academy-includes-title"
-      className="relative overflow-hidden bg-white py-14 sm:py-16 lg:py-20"
+      className="cv-auto-lg relative overflow-hidden bg-white py-14 sm:py-16 lg:py-20"
     >
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

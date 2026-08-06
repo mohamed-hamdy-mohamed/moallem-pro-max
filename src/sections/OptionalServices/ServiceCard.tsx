@@ -1,3 +1,4 @@
+import { memo } from "react";
 import clsx from "clsx";
 import { Check } from "lucide-react";
 import {
@@ -46,7 +47,7 @@ const ServiceCard = ({ service }: ServiceCardProps) => (
                   CHECK_COLOR_CLASSES[service.checkColor],
                 )}
               >
-                <Check className="h-3 w-3 text-white" strokeWidth={3} />
+                <Check className="h-3 w-3 text-white" strokeWidth={3} aria-hidden="true" />
               </span>
               <span className="text-sm leading-7 text-[#0F2348] sm:text-[15px]">{item.text}</span>
             </li>
@@ -57,4 +58,4 @@ const ServiceCard = ({ service }: ServiceCardProps) => (
   </article>
 );
 
-export default ServiceCard;
+export default memo(ServiceCard);

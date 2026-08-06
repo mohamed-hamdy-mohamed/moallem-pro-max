@@ -3,7 +3,7 @@ import laptopImg from "../../assets/LaptopImage2.png";
 import { COMPARISON_LABELS, SOLUTION_TEXT } from "../../data/comparisonData";
 
 const SolutionCard = () => (
-  <article className="relative order-1 rounded-3xl border border-slate-100 bg-white p-5 shadow-[0_12px_40px_rgba(15,35,72,0.07)] sm:p-6 lg:order-1 lg:p-7">
+  <article className="relative order-1 rounded-3xl border border-slate-100 bg-[#F8FAFC] p-5 shadow-[0_12px_40px_rgba(15,35,72,0.07)] sm:p-6 lg:order-1 lg:p-7">
     <div className="absolute -top-4 right-4 flex items-center gap-2 rounded-xl bg-[#16A34A] px-4 py-2 shadow-md sm:right-6">
       <Check className="h-4 w-4 text-white" strokeWidth={2.5} />
       <span className="text-sm font-bold text-white sm:text-[15px]">
@@ -23,7 +23,11 @@ const SolutionCard = () => (
       <img
         src={laptopImg}
         alt="منصة معلم برو ماكس"
-        className="relative z-10 mx-auto w-full bg-transparent object-contain drop-shadow-[0_16px_32px_rgba(15,35,72,0.10)]"
+        className="relative z-10 mx-auto h-auto w-full bg-transparent object-cover"
+        width={1000}
+        height={667}
+        loading="lazy"
+        decoding="async"
       />
     </div>
 

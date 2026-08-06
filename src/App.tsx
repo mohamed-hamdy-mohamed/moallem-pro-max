@@ -1,26 +1,34 @@
+import { lazy, Suspense } from "react";
 import NavBar from "./shared/NavBar";
 import SiteFooter from "./shared/SiteFooter";
 import FloatingWhatsApp from "./shared/FloatingWhatsApp";
 import Hero from "./sections/Hero";
-import HeroIntro from "./sections/HeroIntro";
-import ComparisonSection from "./sections/Comparison";
-import AcademyIncludesSection from "./sections/AcademyIncludes";
-import PostLaunchSection from "./sections/PostLaunch";
-import PackagesSection from "./sections/Packages";
-import OptionalServicesSection from "./sections/OptionalServices";
+
+const HeroIntro = lazy(() => import("./sections/HeroIntro"));
+const ComparisonSection = lazy(() => import("./sections/Comparison"));
+const AcademyIncludesSection = lazy(() => import("./sections/AcademyIncludes"));
+const PostLaunchSection = lazy(() => import("./sections/PostLaunch"));
+const PackagesSection = lazy(() => import("./sections/Packages"));
+const OptionalServicesSection = lazy(() => import("./sections/OptionalServices"));
+
+const SectionFallback = () => (
+  <div className="min-h-[24rem] w-full" aria-hidden="true" />
+);
 
 const App = () => {
   return (
     <>
       <NavBar />
-      <main className="pb-44 sm:pb-48">
+      <main id="main-content" className="pb-44 sm:pb-48">
         <Hero />
-        <HeroIntro />
-        <ComparisonSection />
-        <AcademyIncludesSection />
-        <PostLaunchSection />
-        <PackagesSection />
-        <OptionalServicesSection />
+        <Suspense fallback={<SectionFallback />}>
+          <HeroIntro />
+          <ComparisonSection />
+          <AcademyIncludesSection />
+          <PostLaunchSection />
+          <PackagesSection />
+          <OptionalServicesSection />
+        </Suspense>
       </main>
       <SiteFooter />
       <FloatingWhatsApp />

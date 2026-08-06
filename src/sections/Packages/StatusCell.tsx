@@ -1,3 +1,4 @@
+import { memo } from "react";
 import clsx from "clsx";
 import { Check, X } from "lucide-react";
 import type { CellValue } from "../../data/packagesData";
@@ -11,8 +12,12 @@ const StatusCell = ({ value, className }: StatusCellProps) => {
   if (value.type === "check") {
     return (
       <div className={clsx("flex items-center justify-center", className)}>
-        <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#FF7A00] shadow-sm sm:h-8 sm:w-8">
-          <Check className="h-3.5 w-3.5 text-white sm:h-4 sm:w-4" strokeWidth={3} />
+        <span
+          className="flex h-7 w-7 items-center justify-center rounded-full bg-[#FF7A00] shadow-sm sm:h-8 sm:w-8"
+          role="img"
+          aria-label="متوفر"
+        >
+          <Check className="h-3.5 w-3.5 text-white sm:h-4 sm:w-4" strokeWidth={3} aria-hidden="true" />
         </span>
       </div>
     );
@@ -21,8 +26,12 @@ const StatusCell = ({ value, className }: StatusCellProps) => {
   if (value.type === "cross") {
     return (
       <div className={clsx("flex items-center justify-center", className)}>
-        <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#CBD5E1] shadow-sm sm:h-8 sm:w-8">
-          <X className="h-3.5 w-3.5 text-white sm:h-4 sm:w-4" strokeWidth={3} />
+        <span
+          className="flex h-7 w-7 items-center justify-center rounded-full bg-[#CBD5E1] shadow-sm sm:h-8 sm:w-8"
+          role="img"
+          aria-label="غير متوفر"
+        >
+          <X className="h-3.5 w-3.5 text-white sm:h-4 sm:w-4" strokeWidth={3} aria-hidden="true" />
         </span>
       </div>
     );
@@ -38,4 +47,4 @@ const StatusCell = ({ value, className }: StatusCellProps) => {
   );
 };
 
-export default StatusCell;
+export default memo(StatusCell);

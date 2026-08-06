@@ -13,23 +13,24 @@ const FeaturesTable = () => (
   <div className="overflow-hidden rounded-2xl border border-[#E2E8F0] bg-white shadow-[0_12px_40px_rgba(15,35,72,0.06)]">
     <div className="overflow-x-auto">
       <table className="w-full min-w-[720px] border-collapse text-right">
+        <caption className="sr-only">مقارنة مميزات باقة المدرب وباقة المؤسسات</caption>
         <thead>
           <tr>
-            <th className="w-[36%] bg-[#0F2348] px-4 py-4 text-sm font-bold text-white sm:px-5 sm:text-base">
+            <th scope="col" className="w-[36%] bg-[#0F2348] px-4 py-4 text-sm font-bold text-white sm:px-5 sm:text-base">
               <span className="inline-flex items-center gap-2">
-                <FeatureIcon className="h-4 w-4 text-[#FF7A00]" strokeWidth={2.2} />
+                <FeatureIcon className="h-4 w-4 text-[#FF7A00]" strokeWidth={2.2} aria-hidden="true" />
                 {PACKAGE_COLUMNS.feature}
               </span>
             </th>
-            <th className="w-[32%] bg-[#FF7A00] px-4 py-4 text-sm font-bold text-white sm:px-5 sm:text-base">
+            <th scope="col" className="w-[32%] bg-[#FF7A00] px-4 py-4 text-sm font-bold text-white sm:px-5 sm:text-base">
               <span className="inline-flex items-center justify-center gap-2">
-                <TrainerIcon className="h-4 w-4 text-white" strokeWidth={2.2} />
+                <TrainerIcon className="h-4 w-4 text-white" strokeWidth={2.2} aria-hidden="true" />
                 {PACKAGE_COLUMNS.trainer}
               </span>
             </th>
-            <th className="w-[32%] bg-[#0F2348] px-4 py-4 text-sm font-bold text-white sm:px-5 sm:text-base">
+            <th scope="col" className="w-[32%] bg-[#0F2348] px-4 py-4 text-sm font-bold text-white sm:px-5 sm:text-base">
               <span className="inline-flex items-center justify-center gap-2">
-                <InstitutionsIcon className="h-4 w-4 text-white" strokeWidth={2.2} />
+                <InstitutionsIcon className="h-4 w-4 text-white" strokeWidth={2.2} aria-hidden="true" />
                 {PACKAGE_COLUMNS.institutions}
               </span>
             </th>

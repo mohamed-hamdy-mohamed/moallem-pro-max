@@ -4,7 +4,7 @@ import IntroCard from "./IntroCard";
 
 const HeroIntro = () => {
   return (
-    <section dir="rtl" aria-label="مقدمة عن معلم برو ماكس" className="bg-white">
+    <section dir="rtl" aria-label="مقدمة عن معلم برو ماكس" className="cv-auto bg-white">
       <div className="mx-auto max-w-7xl px-4 pb-12 pt-2 sm:px-6 sm:pb-16 lg:px-8">
         <IntroCard />
 

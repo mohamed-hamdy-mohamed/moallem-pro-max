@@ -15,6 +15,7 @@ const FooterCTA = () => {
         target="_blank"
         rel="noopener noreferrer"
         onClick={() => handleWhatsAppClick()}
+        aria-label={`${PRIMARY_CTA.title} — ${PRIMARY_CTA.subtitle}`}
         className={`${sharedClass} bg-[#FF7A00] shadow-[0_14px_36px_rgba(255,122,0,0.32)]`}
       >
         <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white sm:h-14 sm:w-14">
@@ -31,6 +32,7 @@ const FooterCTA = () => {
         target="_blank"
         rel="noopener noreferrer"
         onClick={() => handleWhatsAppClick()}
+        aria-label={`${WHATSAPP_CTA.title} — ${WHATSAPP_CTA.subtitle}`}
         className={`${sharedClass} border-2 border-[#25D366] bg-white shadow-[0_4px_20px_rgba(15,35,72,0.06)]`}
       >
         <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#25D366] sm:h-14 sm:w-14">
