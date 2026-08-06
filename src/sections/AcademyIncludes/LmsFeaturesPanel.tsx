@@ -1,5 +1,5 @@
 import { GraduationCap } from "lucide-react";
-import laptopImg from "../../assets/LaptopImg.png";
+import laptopImg from "../../assets/LaptopImage2.png";
 import { LMS_FEATURES, LMS_HIGHLIGHTS, LMS_PANEL } from "../../data/academyIncludesData";
 import LmsFeatureCard from "./LmsFeatureCard";
 import LmsHighlightItem from "./LmsHighlightItem";

@@ -1,5 +1,5 @@
 import { Check, GraduationCap, ShieldCheck } from "lucide-react";
-import laptopImg from "../../assets/LaptopImg.png";
+import laptopImg from "../../assets/LaptopImage2.png";
 import { COMPARISON_LABELS, SOLUTION_TEXT } from "../../data/comparisonData";
 
 const SolutionCard = () => (

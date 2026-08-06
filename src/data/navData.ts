@@ -8,9 +8,10 @@ export interface NavLink {
 
 export const NAV_LINKS: NavLink[] = [
   { id: "home", label: "الرئيسية", href: "#hero" },
-  { id: "why", label: "لماذا نحن", href: "#comparison" },
   { id: "offer", label: "العرض", href: "#offer" },
-  { id: "services", label: "الخدمات", href: "#services" },
+  { id: "why", label: "لماذا نحن", href: "#comparison" },
+  { id: "packages", label: "الباقات", href: "#packages" },
   { id: "features", label: "المميزات", href: "#features" },
+  { id: "services", label: "الخدمات", href: "#services" },
   { id: "contact", label: "تواصل معنا", href: WHATSAPP_URL },
 ];

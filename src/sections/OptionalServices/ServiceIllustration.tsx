@@ -1,64 +1,71 @@
-import {
-  Crown,
-  Mic,
-  Monitor,
-  Shield,
-  Users,
-} from "lucide-react";
+import { Crown, Shield } from "lucide-react";
 import type { OptionalService } from "../../data/optionalServicesData";
+import googleLogo from "../../assets/google.svg";
+import TrainingLaptop from "../../assets/Training_Laptop.png";
+import SocialMedia from "../../assets/SocialMedia.png";
 
 interface ServiceIllustrationProps {
   service: OptionalService;
 }
 
+const IMAGE_CLASS =
+  "mx-auto h-auto max-h-[180px] w-auto max-w-[260px] object-contain sm:max-h-[210px]";
+
+const ICON_WRAPPER =
+  "flex h-[210px] items-center justify-center";
+
 const ServiceIllustration = ({ service }: ServiceIllustrationProps) => {
-  if (service.variant === "social") {
-    return (
-      <div className="flex items-center justify-center gap-3 py-4">
-        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#FF7A00]/15">
-          <Users className="h-6 w-6 text-[#FF7A00]" strokeWidth={2} />
+  switch (service.variant) {
+    case "social":
+      return (
+        <div className={ICON_WRAPPER}>
+          <img
+            src={SocialMedia}
+            alt="مجتمع الطلاب"
+            className={IMAGE_CLASS}
+          />
         </div>
-        <div className="h-px w-8 bg-slate-200" />
-        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#0F2348]/10">
-          <Users className="h-5 w-5 text-[#0F2348]" strokeWidth={2} />
-        </div>
-        <div className="h-px w-8 bg-slate-200" />
-        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#FF7A00]/15">
-          <Users className="h-6 w-6 text-[#FF7A00]" strokeWidth={2} />
-        </div>
-      </div>
-    );
-  }
+      );
 
-  if (service.variant === "memberships") {
-    return (
-      <div className="flex items-center justify-center py-4">
-        <div className="relative flex h-16 w-16 items-center justify-center rounded-2xl bg-[#3B82F6]/10">
-          <Shield className="h-8 w-8 text-[#3B82F6]" strokeWidth={2} />
-          <Crown className="absolute -right-1 -top-1 h-5 w-5 text-[#FF7A00]" strokeWidth={2} />
+    case "memberships":
+      return (
+        <div className={ICON_WRAPPER}>
+          <div className="relative flex h-[180px] w-[180px] items-center justify-center rounded-3xl bg-[#F8FAFC] shadow-sm">
+            <Shield
+              className="h-20 w-20 text-[#3B82F6]"
+              strokeWidth={1.8}
+            />
+
+            <Crown
+              className="absolute -top-3 h-10 w-10 text-[#FFB000]"
+              strokeWidth={1.8}
+            />
+          </div>
         </div>
-      </div>
-    );
-  }
+      );
 
-  if (service.variant === "recording") {
-    return (
-      <div className="flex items-center justify-center gap-4 py-4">
-        <Monitor className="h-10 w-10 text-[#0F2348]" strokeWidth={2} />
-        <Mic className="h-8 w-8 text-[#FF7A00]" strokeWidth={2} />
-      </div>
-    );
-  }
+    case "recording":
+      return (
+        <div className={ICON_WRAPPER}>
+          <img
+            src={TrainingLaptop}
+            alt="تدريب على تسجيل الكورسات"
+            className={IMAGE_CLASS}
+          />
+        </div>
+      );
 
-  return (
-    <div className="flex items-center justify-center py-4">
-      <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-md ring-1 ring-slate-100">
-        <span className="text-2xl font-bold">
-          <span className="text-[#4285F4]">G</span>
-        </span>
-      </div>
-    </div>
-  );
+    default:
+      return (
+        <div className={ICON_WRAPPER}>
+          <img
+            src={googleLogo}
+            alt="Google"
+            className={IMAGE_CLASS}
+          />
+        </div>
+      );
+  }
 };
 
 export default ServiceIllustration;

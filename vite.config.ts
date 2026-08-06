@@ -10,4 +10,11 @@ export default defineConfig({
     tailwindcss(),
     babel({ presets: [reactCompilerPreset()] }),
   ],
+  build: {
+    assetsInlineLimit: (filePath) => {
+      // Keep SVGs as standalone files (no data-URI / base64 inlining).
+      if (filePath.endsWith(".svg")) return false;
+      return undefined;
+    },
+  },
 });

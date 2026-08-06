@@ -1,5 +1,4 @@
 import { GROWTH_SERVICES, POST_LAUNCH_HEADING } from "../../data/postLaunchData";
-import SectionDotDecorations from "../../ui/SectionDotDecorations";
 import GrowthIntroCard from "./GrowthIntroCard";
 import GrowthServiceItem from "./GrowthServiceItem";
 import GrowthVisual from "./GrowthVisual";
@@ -12,14 +11,6 @@ const PostLaunchSection = () => {
       aria-labelledby="post-launch-title"
       className="relative overflow-hidden bg-[#F8FAFC] py-14 sm:py-16 lg:py-20"
     >
-      <SectionDotDecorations
-        idPrefix="post-launch"
-        leftPositionClassName="left-6 top-16 grid-cols-3 lg:left-12"
-        rightPositionClassName="right-6 top-16 grid-cols-3 lg:right-12"
-        leftDotClassName="bg-[#FF7A00]/35"
-        rightDotClassName="bg-[#0F2348]/20"
-      />
-
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <header className="mx-auto max-w-4xl text-center">
           <h2

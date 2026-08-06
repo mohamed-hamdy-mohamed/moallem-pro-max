@@ -1,4 +1,4 @@
-import laptopImg from "../../assets/LaptopImg.png";
+import laptopImg from "../../assets/LaptopImage2.png";
 import { PHONE_MOCKUP } from "../../data/academyIncludesData";
 
 const CheckoutPhoneMockup = () => (

@@ -6,6 +6,7 @@ import HeroIntro from "./sections/HeroIntro";
 import ComparisonSection from "./sections/Comparison";
 import AcademyIncludesSection from "./sections/AcademyIncludes";
 import PostLaunchSection from "./sections/PostLaunch";
+import PackagesSection from "./sections/Packages";
 import OptionalServicesSection from "./sections/OptionalServices";
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
         <ComparisonSection />
         <AcademyIncludesSection />
         <PostLaunchSection />
+        <PackagesSection />
         <OptionalServicesSection />
       </main>
       <SiteFooter />

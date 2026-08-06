@@ -4,7 +4,6 @@ import {
   CHECK_COLOR_CLASSES,
   type OptionalService,
 } from "../../data/optionalServicesData";
-import CardDotDecoration from "./CardDotDecoration";
 import MembershipTierRow from "./MembershipTierRow";
 import ServiceIllustration from "./ServiceIllustration";
 
@@ -55,8 +54,6 @@ const ServiceCard = ({ service }: ServiceCardProps) => (
         </ul>
       )}
     </div>
-
-    {service.dotCorner ? <CardDotDecoration corner={service.dotCorner} /> : null}
   </article>
 );
 
